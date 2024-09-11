@@ -284,6 +284,7 @@ button:hover {
 
 input[type="range"] {
   -webkit-appearance: none;
+  appearance: none; /* 添加标准属性以提高兼容性 */
   background: #d3d3d3;
   border-radius: 5px;
   height: 5px;
