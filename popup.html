@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Random Password Generator</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="copy-icon" viewBox="0 0 24 24">
+      <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+    </symbol>
+    <symbol id="check-icon" viewBox="0 0 24 24">
+      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+    </symbol>
+    <symbol id="refresh-icon" viewBox="0 0 24 24">
+      <path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/>
+    </symbol>
+    <symbol id="export-icon" viewBox="0 0 24 24">
+      <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+    </symbol>
+  </svg>
+  <div class="container">
+    <h1>Random Password Generator</h1>
+    
+    <div class="section">
+      <h2>Password Settings</h2>
+      <div class="settings-row">
+        <div class="setting-item">
+          <label for="length">Length: <span id="length-value">15</span></label>
+          <input type="range" id="length" min="4" max="30" value="15">
+        </div>
+        <div class="setting-item">
+          <label for="count">Count: <span id="count-value">50</span></label>
+          <input type="range" id="count" min="3" max="100" value="50">
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Character Types</h2>
+      <div class="options">
+        <div class="options-row">
+          <label>
+            <input type="checkbox" id="uppercase" checked> Uppercase
+          </label>
+          <label>
+            <input type="checkbox" id="lowercase" checked> Lowercase
+          </label>
+        </div>
+        <div class="options-row">
+          <label>
+            <input type="checkbox" id="numbers" checked> Numbers
+          </label>
+          <label>
+            <input type="checkbox" id="symbols" checked> Symbols
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Generated Passwords</h2>
+      <div id="passwords-container">
+        <!-- 密码在这里动态生成 -->
+      </div>
+      <div class="button-group">
+        <div class="copy-container">
+          <button id="copy">
+            <svg class="button-icon copy-all-icon"><use xlink:href="#copy-icon"></use></svg>
+            <svg class="button-icon check-all-icon" style="display: none;"><use xlink:href="#check-icon"></use></svg>
+            Copy All
+          </button>
+        </div>
+        <div class="spacer"></div>
+        <button id="refresh" title="Refresh">
+          <svg class="button-icon"><use xlink:href="#refresh-icon"></use></svg>
+        </button>
+        <div class="spacer"></div>
+        <button id="export">
+          <svg class="button-icon"><use xlink:href="#export-icon"></use></svg>
+          Export
+        </button>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

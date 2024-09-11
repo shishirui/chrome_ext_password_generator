@@ -1,0 +1,388 @@
+body {
+  background-color: #f0f0f0;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  width: 400px;
+}
+
+.container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px 10px;
+}
+
+.divider {
+  background-color: #e0e0e0;
+  border: 0;
+  height: 1px;
+  margin: 10px -15px;
+  width: calc(100% + 30px);
+}
+
+.section {
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+
+h1 {
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 18px;
+  margin-bottom: 5px;
+  margin-top: 0;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  text-align: left;
+}
+
+h2 {
+  color: #808080;
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.password-display {
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+}
+
+#password {
+  font-family: monospace;
+  width: 100%;
+  word-break: break-all;
+}
+
+#passwords-container {
+  background-color: #f7f7f7;
+  height: 200px;
+  margin-bottom: 20px;
+  overflow-y: auto;
+  padding: 5px 0px;
+}
+
+#passwords-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+#passwords-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+#passwords-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+#passwords-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.password-item {
+  align-items: center;
+  display: flex;
+  font-family: monospace;
+  justify-content: space-between;
+  margin-bottom: 0px;
+  padding: 1px 10px;
+  word-break: break-all;
+}
+
+.password-item:last-child {
+  margin-bottom: 0;
+}
+
+.password-text {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.settings-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.setting-item {
+  flex-basis: 48%;
+}
+
+.setting-item label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.setting-item input[type="range"] {
+  width: 100%;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+}
+
+.options-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.options-row label {
+  align-items: center;
+  display: flex;
+  flex-basis: 48%;
+  cursor: pointer;
+}
+
+.options-row input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+button {
+  align-items: center;
+  background-color: #0d0c21;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-size: 14px;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  justify-content: center;
+  line-height: 1;
+  padding: 8px 12px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  font-size: 12px;
+}
+
+button:hover {
+  background-color: #1a1933;
+}
+
+.button-group {
+  align-items: stretch;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.button-group button {
+  height: 28px;
+  margin-right: 5px;
+}
+
+.button-icon {
+  fill: currentColor;
+  height: 16px;
+  margin-right: 5px;
+  vertical-align: middle;
+  width: 16px;
+}
+
+.copy-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  height: 30px;
+  padding: 5px;
+}
+
+.copy-button:hover {
+  background: none;
+}
+
+.copy-button:hover .copy-icon {
+  opacity: 0.5;
+}
+
+.copy-icon, .check-icon, .copy-all-icon, .check-all-icon {
+  fill: #0d0c21;
+  height: 16px;
+  width: 16px;
+}
+
+.copy-all-icon, .check-all-icon {
+  fill: currentColor;
+  height: 16px;
+  margin-right: 5px;
+  transition: display 0.3s;
+  vertical-align: middle;
+  width: 16px;
+}
+
+.check-icon, .check-all-icon {
+  display: none;
+}
+
+.copy-button.copied .copy-icon,
+#copy.copied .copy-all-icon {
+  display: none;
+}
+
+.copy-button.copied .check-icon,
+#copy.copied .check-all-icon {
+  display: inline;
+}
+
+#copy .copy-all-icon,
+#copy .check-all-icon {
+  position: static;
+  transform: none;
+}
+
+#copy, .copy-button {
+  position: relative;
+}
+
+#refresh {
+  background: none;
+  flex: 0 0 34px;
+  padding: 0;
+  width: 34px;
+}
+
+#refresh .button-icon {
+  fill: #0d0c21;
+  height: 24px;
+  margin: 0;
+  width: 24px;
+}
+
+#export {
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #0d0c21;
+  color: #0d0c21;
+  display: flex;
+  justify-content: center;
+}
+
+#export .button-icon {
+  fill: #0d0c21;
+  margin: 0;
+  margin-right: 5px;
+}
+
+#export, #copy {
+  padding: 8px 12px;
+  width: auto;
+}
+
+#count {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.spacer {
+  flex: 1;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  background: #d3d3d3;
+  border-radius: 5px;
+  height: 5px;
+  opacity: 0.7;
+  outline: none;
+  transition: opacity .2s;
+  width: 100%;
+}
+
+input[type="range"]:hover {
+  opacity: 1;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #0d0c21;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  background: #0d0c21;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+}
+
+input[type="range"]::-moz-range-track {
+  background: #d3d3d3;
+  border-radius: 5px;
+  height: 5px;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 3px rgba(13, 12, 33, 0.3);
+}
+
+input[type="range"]:focus::-moz-range-thumb {
+  box-shadow: 0 0 0 3px rgba(13, 12, 33, 0.3);
+}
+
+.password-number {
+  margin-right: 10px;
+  color: #808080;
+  min-width: 20px;
+  text-align: right;
+}
+
+.password-text {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #0d0c21;
+  border-radius: 3px;
+  outline: none;
+  transition: all 0.3s;
+  position: relative;
+  cursor: pointer;
+  background-color: white;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #0d0c21;
+}
+
+input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 3px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.options-row label {
+  align-items: center;
+  display: flex;
+  flex-basis: 48%;
+  cursor: pointer;
+}
+
+.options-row input[type="checkbox"] {
+  margin-right: 8px;
+}
